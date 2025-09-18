@@ -1,0 +1,11 @@
+n1=1 #define variables
+n2=2
+n3=0
+Sum=2
+while n3<=4000000: #create while loop
+    if n3%2==0: #check even numbers
+       Sum+=n3
+    n3=n1+n2
+    n1,n2=n2,n3 #swap values of variables
+    
+print(Sum)
