@@ -1,0 +1,8 @@
+Max=0       
+for i in range(99,1000):
+    for j in range(99,1000):
+        n=i*j
+        if str(n)==str(n)[::-1]:
+            if Max<=n:
+                Max=n
+print(Max)                
