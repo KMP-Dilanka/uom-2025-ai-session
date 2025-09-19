@@ -1,0 +1,21 @@
+def multiple(n): #getting multiple of digits in each set
+    value=1
+    for i in n:                  
+        value*=int(i)           
+    return value
+
+
+file=open('test.txt' ,'r') #open data file
+number=''
+for line in file:
+    number+=line.strip()
+    
+Max=0
+for j in range(0,1001-13):    
+    if '0' not in number[j:j+13]:        
+        val=multiple(number[j:j+13])
+        if Max<=val:
+           Max=val
+print(Max)    
+   
+file.close()
