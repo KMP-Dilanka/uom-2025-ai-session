@@ -1,0 +1,36 @@
+
+def prime_check(R1,R2): #check prime number in given range and create a prime number list in give range
+    for i in range(R1+1,R2+1):
+        for j in range(2,int(i**0.5)+1):
+            if i%j==0:
+               break
+        else:
+            prime.append(i)
+    return prime
+
+        
+number=1
+prime=[]
+Range=input().split('-') #get input range
+R1=int(Range[0])
+R2=int(Range[1])
+
+
+for num in prime_check(R1,R2):
+    Max=0
+    for k in range(R1+1,R2+1):      
+        count=0
+        while True:
+            if k%num==0:
+                k//=num
+                count+=1
+            else:
+                break
+        if Max<=count:
+           Max=count
+           multiple=num**count
+                
+    number*= multiple
+   
+print(number)        
+    
