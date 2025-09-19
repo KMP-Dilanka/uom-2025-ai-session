@@ -1,0 +1,21 @@
+import math
+
+num=int(input())
+
+
+def prime_check(prime):   #prime number checking 
+    for i in range(2,int(math.sqrt(prime))+1):
+        if prime%i==0:
+            return False
+    else:
+        return True
+            
+prime=2
+place=1
+while True:
+    prime+=1
+    if prime_check(prime): #counting prime numbers
+        place+=1
+    if place==num:
+        print(prime)
+        break
